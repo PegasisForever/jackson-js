@@ -193,8 +193,8 @@ export class JsonParser<T> {
    * @param text - the JSON string to be deserialized.
    * @param context - the context to be used during deserialization.
    */
-  parse(text: string, context?: JsonParserContext): T {
-    const value = JSON.parse(text);
+  parse(text: string | object, context?: JsonParserContext): T {
+    const value = typeof text === 'string' ? JSON.parse(text) : text;
     return this.transform(value, context);
   }
 

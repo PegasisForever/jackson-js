@@ -65,7 +65,7 @@ export class ObjectMapper {
    * @param text - the JSON string to be deserialized.
    * @param context - the context to be used during deserialization.
    */
-  parse<T>(text: string, context?: JsonParserContext): T {
+  parse<T>(text: string | object, context?: JsonParserContext): T {
     context = JsonParser.mergeContexts([this.defaultParserContext, context]);
 
     const jsonParser = new JsonParser<T>();

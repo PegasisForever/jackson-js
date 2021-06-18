@@ -41,5 +41,5 @@ export declare class ObjectMapper {
      * @param text - the JSON string to be deserialized.
      * @param context - the context to be used during deserialization.
      */
-    parse<T>(text: string, context?: JsonParserContext): T;
+    parse<T>(text: string | object, context?: JsonParserContext): T;
 }

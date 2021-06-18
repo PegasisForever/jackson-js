@@ -36,7 +36,7 @@ export declare class JsonParser<T> {
      * @param text - the JSON string to be deserialized.
      * @param context - the context to be used during deserialization.
      */
-    parse(text: string, context?: JsonParserContext): T;
+    parse(text: string | object, context?: JsonParserContext): T;
     /**
      * Method for applying json decorators to a JavaScript object/value parsed.
      * It returns a JavaScript object/value with json decorators applied.
