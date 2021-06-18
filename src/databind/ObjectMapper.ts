@@ -58,6 +58,13 @@ export class ObjectMapper {
     return jsonStringifier.stringify(obj, context);
   }
 
+  toObject<T>(obj: T, context?: JsonStringifierContext): object {
+    context = JsonStringifier.mergeContexts([this.defaultStringifierContext, context]);
+
+    const jsonStringifier = new JsonStringifier<T>();
+    return jsonStringifier.toObject(obj, context);
+  }
+
   /**
    * Method for deserializing a JSON string into a JavaScript object or value.
    * Context will be merged using {@link JsonParser.mergeContexts} with {@link defaultParserContext}.

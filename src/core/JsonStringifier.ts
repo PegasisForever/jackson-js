@@ -222,6 +222,10 @@ export class JsonStringifier<T> {
     return JSON.stringify(preProcessedObj, null, context.format);
   }
 
+  toObject(obj: T, context?: JsonStringifierContext): object {
+    return this.transform(obj, context);
+  }
+
   /**
    * Method for applying json decorators to a JavaScript object/value.
    * It returns a JavaScript object/value with json decorators applied and ready to be JSON serialized.

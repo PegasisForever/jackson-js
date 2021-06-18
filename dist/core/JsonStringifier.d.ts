@@ -37,6 +37,7 @@ export declare class JsonStringifier<T> {
      * @param context - the context to be used during serialization.
      */
     stringify(obj: T, context?: JsonStringifierContext): string;
+    toObject(obj: T, context?: JsonStringifierContext): object;
     /**
      * Method for applying json decorators to a JavaScript object/value.
      * It returns a JavaScript object/value with json decorators applied and ready to be JSON serialized.

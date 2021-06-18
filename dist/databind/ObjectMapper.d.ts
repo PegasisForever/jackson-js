@@ -34,6 +34,7 @@ export declare class ObjectMapper {
      * @param context - the context to be used during serialization.
      */
     stringify<T>(obj: T, context?: JsonStringifierContext): string;
+    toObject<T>(obj: T, context?: JsonStringifierContext): object;
     /**
      * Method for deserializing a JSON string into a JavaScript object or value.
      * Context will be merged using {@link JsonParser.mergeContexts} with {@link defaultParserContext}.
